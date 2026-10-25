@@ -16,7 +16,12 @@
    "content": "",
    "cat": "person",
    "images": [],
-   "links": [],
+   "links": [
+    {
+     "id": "mvngk6in8nvwb",
+     "note": "情侣"
+    }
+   ],
    "pinned": false,
    "tags": [],
    "story": "",
@@ -48,6 +53,6 @@
    "other"
   ]
  },
- "version": 5,
- "lastSaved": "2026-10-25T06:40:27.749Z"
+ "version": 6,
+ "lastSaved": "2026-10-25T09:20:06.966Z"
 }
