@@ -21,6 +21,20 @@
    "tags": [],
    "story": "",
    "updated": 1792910392105
+  },
+  {
+   "id": "mvngk6in8nvwb",
+   "bookId": "mvngem6i2binq",
+   "created": 1792910399999,
+   "title": "吴雩",
+   "content": "",
+   "cat": "person",
+   "images": [],
+   "links": [],
+   "pinned": false,
+   "tags": [],
+   "story": "",
+   "updated": 1792910399999
   }
  ],
  "settings": {
@@ -34,6 +48,6 @@
    "other"
   ]
  },
- "version": 1,
- "lastSaved": "2026-10-25T06:39:52.105Z"
+ "version": 3,
+ "lastSaved": "2026-10-25T06:39:59.999Z"
 }
