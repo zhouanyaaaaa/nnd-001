@@ -1,0 +1,39 @@
+{
+ "projects": [
+  {
+   "id": "mvngem6i2binq",
+   "name": "我的第一本书",
+   "em": "📕",
+   "created": 1792910140362
+  }
+ ],
+ "cards": [
+  {
+   "id": "mvngk0fdelicv",
+   "bookId": "mvngem6i2binq",
+   "created": 1792910392105,
+   "title": "步重华",
+   "content": "",
+   "cat": "person",
+   "images": [],
+   "links": [],
+   "pinned": false,
+   "tags": [],
+   "story": "",
+   "updated": 1792910392105
+  }
+ ],
+ "settings": {
+  "categories": [
+   "person",
+   "clue",
+   "time",
+   "place",
+   "quote",
+   "q",
+   "other"
+  ]
+ },
+ "version": 1,
+ "lastSaved": "2026-10-25T06:39:52.105Z"
+}
