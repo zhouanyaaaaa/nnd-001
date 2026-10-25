@@ -41,6 +41,22 @@
    "tags": [],
    "story": "",
    "updated": 1792910399999
+  },
+  {
+   "id": "mvnopvtsjrp0u",
+   "bookId": "mvngem6i2binq",
+   "created": 1792924103008,
+   "title": "杀死年小萍，陈元量，高宝康的凶手三七",
+   "content": "",
+   "cat": "clue",
+   "images": [
+    "images/mvnopplw890a44000000aefa.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [],
+   "story": "",
+   "updated": 1792924103008
   }
  ],
  "settings": {
@@ -55,6 +71,6 @@
    "c_mvnmbvlihitpd"
   ]
  },
- "version": 8,
- "lastSaved": "2026-10-25T09:21:30.294Z"
+ "version": 9,
+ "lastSaved": "2026-10-25T10:28:23.010Z"
 }
