@@ -57,6 +57,24 @@
    "tags": [],
    "story": "",
    "updated": 1792924103008
+  },
+  {
+   "id": "mvnrvar2jpqyd",
+   "bookId": "mvngem6i2binq",
+   "created": 1792929394478,
+   "title": "秦川，鲨鱼，万长文",
+   "content": "",
+   "cat": "clue",
+   "images": [
+    "images/mvnru5v2890a44000000aefa.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [
+    "67章"
+   ],
+   "story": "",
+   "updated": 1792929394478
   }
  ],
  "settings": {
@@ -71,6 +89,6 @@
    "c_mvnmbvlihitpd"
   ]
  },
- "version": 10,
- "lastSaved": "2026-10-25T10:28:59.748Z"
+ "version": 11,
+ "lastSaved": "2026-10-25T11:56:34.479Z"
 }
