@@ -131,6 +131,24 @@
    "tags": [],
    "story": "",
    "updated": 1792976207106
+  },
+  {
+   "id": "mvok5t7389cnl",
+   "bookId": "mvnulv2tamrrj",
+   "created": 1792976914191,
+   "title": "严正步小花",
+   "content": "",
+   "cat": "c_mvojnlq4v6vbp",
+   "images": [
+    "images/mvok5c6m890a44000000aefa.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [
+    "第74章"
+   ],
+   "story": "",
+   "updated": 1792976914191
   }
  ],
  "settings": {
@@ -146,6 +164,6 @@
    "c_mvojnlq4v6vbp"
   ]
  },
- "version": 20,
- "lastSaved": "2026-10-26T01:02:29.791Z"
+ "version": 21,
+ "lastSaved": "2026-10-26T01:08:34.193Z"
 }
