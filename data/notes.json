@@ -149,6 +149,24 @@
    ],
    "story": "",
    "updated": 1792976914191
+  },
+  {
+   "id": "mvp7nohukanqg",
+   "bookId": "mvnulv2tamrrj",
+   "created": 1793016379074,
+   "title": "张志兴教授和陈元量？？？",
+   "content": "",
+   "cat": "q",
+   "images": [
+    "images/mvp7n8w5890a44000000aefa.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [
+    "第75章"
+   ],
+   "story": "",
+   "updated": 1793016379074
   }
  ],
  "settings": {
@@ -165,6 +183,6 @@
    "c_mvok65vrpz78k"
   ]
  },
- "version": 24,
- "lastSaved": "2026-10-26T01:09:06.759Z"
+ "version": 25,
+ "lastSaved": "2026-10-26T12:06:19.075Z"
 }
