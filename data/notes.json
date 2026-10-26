@@ -26,7 +26,7 @@
    "links": [
     {
      "id": "mvngk6in8nvwb",
-     "note": "情侣"
+     "note": "恋人"
     }
    ],
    "pinned": false,
@@ -42,11 +42,16 @@
    "content": "",
    "cat": "person",
    "images": [],
-   "links": [],
+   "links": [
+    {
+     "id": "mvngk0fdelicv",
+     "note": "恋人"
+    }
+   ],
    "pinned": false,
    "tags": [],
    "story": "",
-   "updated": 1792910399999
+   "updated": 1793023971304
   },
   {
    "id": "mvnopvtsjrp0u",
@@ -181,6 +186,6 @@
    "c_mvpc4pcbhjkr9"
   ]
  },
- "version": 33,
- "lastSaved": "2026-10-26T14:12:06.910Z"
+ "version": 34,
+ "lastSaved": "2026-10-26T14:12:51.305Z"
 }
