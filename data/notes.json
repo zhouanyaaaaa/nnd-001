@@ -6,12 +6,6 @@
    "em": "📕",
    "created": 1792910140362,
    "lanes": []
-  },
-  {
-   "id": "mvnulv2tamrrj",
-   "name": "吞海",
-   "em": "📗",
-   "created": 1792933993109
   }
  ],
  "cards": [
@@ -193,6 +187,6 @@
    }
   }
  },
- "version": 40,
- "lastSaved": "2026-10-27T00:33:02.300Z"
+ "version": 41,
+ "lastSaved": "2026-10-27T00:33:05.968Z"
 }
