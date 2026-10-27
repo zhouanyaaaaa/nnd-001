@@ -184,8 +184,15 @@
    "q",
    "other",
    "c_mvpc4pcbhjkr9"
-  ]
+  ],
+  "catMeta": {
+   "c_mvpc4pcbhjkr9": {
+    "name": "笑点解析",
+    "color": "hsl(109,62%,55%)",
+    "em": "🏷"
+   }
+  }
  },
- "version": 34,
- "lastSaved": "2026-10-26T14:12:51.305Z"
+ "version": 35,
+ "lastSaved": "2026-10-27T00:24:36.127Z"
 }
