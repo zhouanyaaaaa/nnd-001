@@ -184,6 +184,24 @@
    ],
    "story": "",
    "updated": 1793063153000
+  },
+  {
+   "id": "mvq7p8jmjevjj",
+   "bookId": "mvngem6i2binq",
+   "created": 1793076917890,
+   "title": "我骗骗骗！我信信信",
+   "content": "",
+   "cat": "c_mvpc4pcbhjkr9",
+   "images": [
+    "images/mvq7otap890a44000000aefa.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [
+    "第89章"
+   ],
+   "story": "",
+   "updated": 1793076917890
   }
  ],
  "settings": {
@@ -205,6 +223,6 @@
    }
   }
  },
- "version": 42,
- "lastSaved": "2026-10-27T01:05:53.001Z"
+ "version": 43,
+ "lastSaved": "2026-10-27T04:55:17.892Z"
 }
