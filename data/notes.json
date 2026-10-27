@@ -89,7 +89,7 @@
   },
   {
    "id": "mvojgmm8zoj7f",
-   "bookId": "mvnulv2tamrrj",
+   "bookId": "mvngem6i2binq",
    "created": 1792975739264,
    "title": "小鱼和张志兴",
    "content": "",
@@ -103,7 +103,7 @@
     "第73章"
    ],
    "story": "",
-   "updated": 1792975739264
+   "updated": 1793061172762
   },
   {
    "id": "mvojncelqpbae",
@@ -193,6 +193,6 @@
    }
   }
  },
- "version": 37,
- "lastSaved": "2026-10-27T00:32:45.222Z"
+ "version": 38,
+ "lastSaved": "2026-10-27T00:32:52.762Z"
 }
