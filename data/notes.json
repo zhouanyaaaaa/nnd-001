@@ -234,6 +234,22 @@
    "tags": [],
    "story": "",
    "updated": 1793077810263
+  },
+  {
+   "id": "mvqm1gs4p06zn",
+   "bookId": "mvngem6i2binq",
+   "created": 1793101003060,
+   "title": "解行档案袋里的照片",
+   "content": "",
+   "cat": "clue",
+   "images": [
+    "images/mvqm1buh890a44000000aefa.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [],
+   "story": "",
+   "updated": 1793101003060
   }
  ],
  "settings": {
@@ -255,6 +271,6 @@
    }
   }
  },
- "version": 46,
- "lastSaved": "2026-10-27T05:10:10.264Z"
+ "version": 47,
+ "lastSaved": "2026-10-27T11:36:43.062Z"
 }
