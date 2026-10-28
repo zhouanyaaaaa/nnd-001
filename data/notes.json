@@ -266,6 +266,22 @@
    "tags": [],
    "story": "",
    "updated": 1793103490198
+  },
+  {
+   "id": "mvreaiv9de5j5",
+   "bookId": "mvngem6i2binq",
+   "created": 1793148454917,
+   "title": "丁盛和张绯",
+   "content": "",
+   "cat": "person",
+   "images": [
+    "images/mvre9vcl007000696d006c00.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [],
+   "story": "",
+   "updated": 1793148454917
   }
  ],
  "settings": {
@@ -287,6 +303,6 @@
    }
   }
  },
- "version": 48,
- "lastSaved": "2026-10-27T12:18:10.199Z"
+ "version": 49,
+ "lastSaved": "2026-10-28T00:47:34.922Z"
 }
