@@ -304,6 +304,23 @@
    "tags": [],
    "story": "",
    "updated": 1793148968554
+  },
+  {
+   "id": "mvz1ythu6lqln",
+   "bookId": "mvz1xs6m36d6i",
+   "created": 1793611482834,
+   "title": "魂王",
+   "content": "",
+   "cat": "other",
+   "images": [
+    "images/mvz1y8v5ff4600e100000001.bin",
+    "images/mvz1ynff007000696d006c00.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [],
+   "story": "",
+   "updated": 1793611482834
   }
  ],
  "settings": {
@@ -325,6 +342,6 @@
    }
   }
  },
- "version": 52,
- "lastSaved": "2026-11-02T09:23:54.478Z"
+ "version": 54,
+ "lastSaved": "2026-11-02T09:24:42.835Z"
 }
