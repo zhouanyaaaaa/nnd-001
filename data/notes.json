@@ -13,9 +13,6 @@
    "em": "📗",
    "created": 1793611434478,
    "cats": [
-    "clue",
-    "time",
-    "place",
     "quote",
     "q",
     "joke",
@@ -381,6 +378,6 @@
    }
   }
  },
- "version": 58,
- "lastSaved": "2026-11-04T13:45:48.819Z"
+ "version": 62,
+ "lastSaved": "2026-11-04T13:45:52.794Z"
 }
