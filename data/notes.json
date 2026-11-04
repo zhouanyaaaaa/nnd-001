@@ -15,8 +15,7 @@
    "cats": [
     "q",
     "joke",
-    "other",
-    "c_mvpc4pcbhjkr9"
+    "other"
    ]
   }
  ],
@@ -377,6 +376,6 @@
    }
   }
  },
- "version": 62,
- "lastSaved": "2026-11-04T13:46:05.563Z"
+ "version": 64,
+ "lastSaved": "2026-11-04T13:46:21.591Z"
 }
