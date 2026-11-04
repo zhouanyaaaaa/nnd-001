@@ -11,7 +11,17 @@
    "id": "mvz1xs6m36d6i",
    "name": "痒痒鼠",
    "em": "📗",
-   "created": 1793611434478
+   "created": 1793611434478,
+   "cats": [
+    "clue",
+    "time",
+    "place",
+    "quote",
+    "q",
+    "joke",
+    "other",
+    "c_mvpc4pcbhjkr9"
+   ]
   }
  ],
  "cards": [
@@ -359,6 +369,7 @@
    "place",
    "quote",
    "q",
+   "joke",
    "other",
    "c_mvpc4pcbhjkr9"
   ],
@@ -370,6 +381,6 @@
    }
   }
  },
- "version": 57,
- "lastSaved": "2026-11-03T00:52:12.380Z"
+ "version": 58,
+ "lastSaved": "2026-11-04T13:45:48.819Z"
 }
