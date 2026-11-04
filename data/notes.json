@@ -5,7 +5,18 @@
    "name": "吞海",
    "em": "📕",
    "created": 1792910140362,
-   "lanes": []
+   "lanes": [],
+   "cats": [
+    "person",
+    "clue",
+    "time",
+    "place",
+    "quote",
+    "q",
+    "joke",
+    "other",
+    "c_mvpc4pcbhjkr9"
+   ]
   },
   {
    "id": "mvz1xs6m36d6i",
@@ -15,7 +26,8 @@
    "cats": [
     "q",
     "joke",
-    "other"
+    "other",
+    "c_mw267mcsp8fwm"
    ]
   }
  ],
@@ -366,16 +378,22 @@
    "q",
    "joke",
    "other",
-   "c_mvpc4pcbhjkr9"
+   "c_mvpc4pcbhjkr9",
+   "c_mw267mcsp8fwm"
   ],
   "catMeta": {
    "c_mvpc4pcbhjkr9": {
     "name": "笑点解析",
     "color": "hsl(109,62%,55%)",
     "em": "🏷"
+   },
+   "c_mw267mcsp8fwm": {
+    "name": "配队",
+    "color": "hsl(243,62%,55%)",
+    "em": "🏷"
    }
   }
  },
- "version": 64,
- "lastSaved": "2026-11-04T13:46:21.591Z"
+ "version": 65,
+ "lastSaved": "2026-11-04T13:46:50.477Z"
 }
