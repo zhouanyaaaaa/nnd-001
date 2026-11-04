@@ -27,7 +27,8 @@
     "q",
     "joke",
     "other",
-    "c_mw267mcsp8fwm"
+    "c_mw267mcsp8fwm",
+    "c_mw267proo9vy0"
    ]
   }
  ],
@@ -379,7 +380,8 @@
    "joke",
    "other",
    "c_mvpc4pcbhjkr9",
-   "c_mw267mcsp8fwm"
+   "c_mw267mcsp8fwm",
+   "c_mw267proo9vy0"
   ],
   "catMeta": {
    "c_mvpc4pcbhjkr9": {
@@ -391,9 +393,14 @@
     "name": "配队",
     "color": "hsl(243,62%,55%)",
     "em": "🏷"
+   },
+   "c_mw267proo9vy0": {
+    "name": "御魂",
+    "color": "hsl(310,62%,55%)",
+    "em": "🏷"
    }
   }
  },
- "version": 65,
- "lastSaved": "2026-11-04T13:46:50.477Z"
+ "version": 66,
+ "lastSaved": "2026-11-04T13:46:54.900Z"
 }
