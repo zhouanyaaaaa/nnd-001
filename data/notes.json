@@ -28,7 +28,8 @@
     "joke",
     "other",
     "c_mw267mcsp8fwm",
-    "c_mw267proo9vy0"
+    "c_mw267proo9vy0",
+    "c_mw267wx5k2507"
    ]
   }
  ],
@@ -381,7 +382,8 @@
    "other",
    "c_mvpc4pcbhjkr9",
    "c_mw267mcsp8fwm",
-   "c_mw267proo9vy0"
+   "c_mw267proo9vy0",
+   "c_mw267wx5k2507"
   ],
   "catMeta": {
    "c_mvpc4pcbhjkr9": {
@@ -398,9 +400,14 @@
     "name": "御魂",
     "color": "hsl(310,62%,55%)",
     "em": "🏷"
+   },
+   "c_mw267wx5k2507": {
+    "name": "关卡",
+    "color": "hsl(17,62%,55%)",
+    "em": "🏷"
    }
   }
  },
- "version": 66,
- "lastSaved": "2026-11-04T13:46:54.900Z"
+ "version": 67,
+ "lastSaved": "2026-11-04T13:47:04.170Z"
 }
