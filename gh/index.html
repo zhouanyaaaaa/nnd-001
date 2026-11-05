@@ -11,7 +11,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-180.png">
 <link rel="icon" href="icon-192.png">
-<title>小说笔记工作台 · GitHub 版 · v1.8.0</title>
+<title>小说笔记工作台 · GitHub 版 · v1.9.1</title>
 <style>
 :root{
   --bg:#f5f5fa; --card:#fff; --line:#e6e4f0; --ink:#241f33; --ink2:#8a879e;
@@ -26,6 +26,37 @@ body{background:var(--bg);color:var(--ink);font:14px/1.55 -apple-system,"Segoe U
   padding-bottom:calc(20px + env(safe-area-inset-bottom))}
 button{font-family:inherit;cursor:pointer}
 .hidden{display:none!important}
+.picker:not(.hidden){display:flex!important}
+
+/* ===== 启动选书页（v1.9.1） ===== */
+.picker{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#f5f5fa,#ecebf8 60%,#f7f2fb);padding:20px;
+  animation:pkIn .22s ease-out}
+@keyframes pkIn{from{opacity:0}to{opacity:1}}
+.pk-card{width:min(430px,100%);max-height:min(80vh,640px);display:flex;flex-direction:column;
+  background:var(--card);border-radius:20px;box-shadow:0 18px 50px rgba(40,30,80,.18);padding:20px 18px 16px}
+.pk-h{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.pk-icon{font-size:26px;line-height:1}
+.pk-h h2{margin:0;font-size:18px;letter-spacing:-.2px}
+.pk-sub{font-size:12px;color:var(--ink2);margin-top:2px}
+.pk-list{flex:1;overflow-y:auto;margin:0 -4px;padding:0 4px}
+.pk-item{display:flex;align-items:center;gap:11px;width:100%;text-align:left;cursor:pointer;
+  background:var(--bg);border:1.5px solid transparent;border-radius:13px;padding:12px 13px;margin-bottom:8px;
+  font-family:inherit;transition:border-color .15s,transform .1s}
+.pk-item:active{transform:scale(.985)}
+.pk-item.last{border-color:var(--acc);background:#f3f1fe}
+.pk-em{font-size:22px;flex:none}
+.pk-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.pk-info b{font-size:14.5px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pk-info small{font-size:11.5px;color:var(--ink2)}
+.pk-badge{background:var(--acc);color:#fff;font-size:10px;font-weight:700;border-radius:5px;
+  padding:1px 5px;margin-left:2px;vertical-align:1px}
+.pk-go{font-size:20px;color:#c9c6d8;flex:none}
+.pk-ops{display:flex;gap:9px;margin-top:12px}
+.pk-ops button{flex:1;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:11px;
+  font-size:13.5px;font-weight:700;color:var(--acc);font-family:inherit;cursor:pointer}
+.pk-ops button:hover{background:#f3f1fe}
+body.is-picking .fab,body.is-picking .top,body.is-picking #main{filter:blur(1.5px)}
 
 /* ===== 顶栏 ===== */
 .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;
@@ -208,6 +239,29 @@ button{font-family:inherit;cursor:pointer}
 .pick-item button{border:0;background:#eceaF6;border-radius:8px;padding:4px 10px;font-size:12px;font-weight:700;color:var(--acc)}
 .pick-item button.rm{color:var(--danger)}
 
+/* ===== 分类管理（全局 + 本书显示，v1.9.0） ===== */
+.cm-scope{font-size:12.5px;font-weight:700;color:var(--acc);background:#f1effa;border-radius:9px;
+  padding:8px 11px;margin:-4px 0 12px}
+.cm-sec{margin-bottom:16px}
+.cm-h{font-size:13px;font-weight:800;margin:0 0 8px;display:flex;flex-direction:column;gap:2px}
+.cm-tip{font-size:11.5px;font-weight:500;color:var(--ink2)}
+.cm-pad{margin-top:7px;display:block}
+.cat-rows{max-height:44vh;overflow-y:auto;border:1px solid var(--line);border-radius:11px;background:var(--card)}
+.cat-row{display:flex;align-items:center;gap:8px;padding:8px 11px;border-bottom:1px solid var(--line);font-size:13px}
+.cat-row:last-child{border-bottom:0}
+.cat-row.off{opacity:.5}
+.cat-row .dot{width:9px;height:9px;border-radius:50%;flex:none}
+.cat-row .nm{flex:1;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cat-row .cnum{font-size:11px;color:var(--ink2);font-weight:500;margin-left:2px}
+.cat-row button{border:0;background:#eceaf6;border-radius:8px;padding:4px 9px;font-size:12px;
+  font-weight:700;color:var(--acc);flex:none;cursor:pointer}
+.cat-row button.rm{color:var(--danger)}
+.cat-row button.cat-tog{background:transparent;font-size:17px;padding:0 2px;color:var(--ink2)}
+.cat-row button.cat-tog.on{color:var(--acc)}
+.cm-wide{width:100%;margin-top:9px;font-size:13px}
+.cm-chk{display:flex;align-items:center;gap:7px;margin-top:9px;font-size:12.5px;color:var(--ink2);cursor:pointer}
+.cm-chk input{width:15px;height:15px;accent-color:var(--acc)}
+
 /* 详情页 */
 .d-cat{display:inline-block;font-size:11px;font-weight:700;color:#fff;border-radius:6px;padding:2px 8px;margin-bottom:8px}
 .d-body{white-space:pre-wrap;font-size:14px;line-height:1.75;color:#3c3854;word-break:break-word}
@@ -282,6 +336,7 @@ body.is-offline .fab{filter:grayscale(1);opacity:.55}
 .cat-chip.zero .n{opacity:.35}
 
 /* ---- v1.8.0 批量选择 / 卡片移动 ---- */
+body.sheet-open .bulk-bar{display:none !important}
 .bulk-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom));
   z-index:50;display:flex;align-items:center;gap:8px;background:#2c2840;color:#fff;border-radius:999px;
   padding:9px 14px;box-shadow:0 8px 26px rgba(0,0,0,.3);max-width:calc(100vw - 24px);overflow-x:auto}
@@ -350,6 +405,20 @@ body.is-offline .fab{filter:grayscale(1);opacity:.55}
 
 <div class="sheet-backdrop hidden" id="sheetBackdrop"></div>
 <div class="sheet hidden" id="sheet"></div>
+
+<!-- 启动时的选书页：有多本书时先选一本 -->
+<div class="picker hidden" id="startPicker">
+  <div class="pk-card">
+    <div class="pk-h"><span class="pk-icon">📚</span>
+      <div><h2>选择一本书</h2><div class="pk-sub" id="pkSub">继续上次阅读进度</div></div>
+    </div>
+    <div class="pk-list" id="pkList"></div>
+    <div class="pk-ops">
+      <button class="btn-ghost" id="pkNew">＋ 新建书本</button>
+      <button class="btn-ghost" id="pkLast">继续上次</button>
+    </div>
+  </div>
+</div>
 <div class="toast-wrap" id="toastWrap"></div>
 <input type="file" id="filePick" accept="image/*" multiple class="hidden">
 
@@ -1174,8 +1243,8 @@ var CardExport = (function () {
 <script>
 /* 小说笔记工作台 · 前端 */
 "use strict";
-var APP_VERSION = "v1.8.0";
-var APP_DATE = "2026-10-26";
+var APP_VERSION = "v1.9.1";
+var APP_DATE = "2026-11-03";
 
 var $ = function (id) { return document.getElementById(id); };
 var state = null;          // {projects, cards, settings}
@@ -1197,9 +1266,10 @@ var CAT_META = {
   place:  { name: "地点",   color: "#e84393", em: "📍" },
   quote:  { name: "摘抄",   color: "#fdcb6e", em: "✏️" },
   q:      { name: "疑问",   color: "#a29bfe", em: "❓" },
+  joke:   { name: "笑点解析", color: "#f39c12", em: "😂" },
   other:  { name: "其他",   color: "#b2bec3", em: "📎" }
 };
-var CAT_ORDER = ["person", "clue", "time", "place", "quote", "q", "other"];
+var CAT_ORDER = ["person", "clue", "time", "place", "quote", "q", "joke", "other"];
 var DEFAULT_SETTINGS = { categories: JSON.parse(JSON.stringify(CAT_ORDER)), catMeta: {} };
 
 /* ============ 工具 ============ */
@@ -1230,6 +1300,35 @@ function curBook() {
     if (state.projects[i].id === curBookId) return state.projects[i];
   return null;
 }
+/* ---- 每本书各自启用哪些分类 ----
+ * book.cats 为 null/undefined → 视为"全部启用"（兼容老数据，行为不变）
+ * book.cats 为数组 → 只启用数组里的分类
+ * 新增的内置分类要不要自动进老书？不进，老书保持"全部启用"状态，仍能看到新分类 */
+function bookCatsOf(b) {
+  if (!b) return (state.settings.categories || []).slice();
+  if (!Array.isArray(b.cats)) return (state.settings.categories || []).slice();
+  return b.cats;
+}
+function bookCatOn(cid, b) {
+  b = b || curBook();
+  if (!b) return true;
+  if (!Array.isArray(b.cats)) return true;
+  return b.cats.indexOf(cid) >= 0;
+}
+/* 把某本书显式切成"启用清单"模式（首次操作该书时调用） */
+function ensureBookCats(b) {
+  b = b || curBook();
+  if (!b) return [];
+  if (!Array.isArray(b.cats)) b.cats = (state.settings.categories || []).slice();
+  return b.cats;
+}
+/* 当前书启用的分类（按全局顺序过滤，保证顺序一致） */
+function catsOfBook(bid) {
+  var b = null;
+  state.projects.forEach(function (p) { if (p.id === (bid || curBookId)) b = p; });
+  var on = bookCatsOf(b);
+  return (state.settings.categories || []).filter(function (cid) { return on.indexOf(cid) >= 0; });
+}
 function cardsOfBook(bid) {
   return state.cards.filter(function (c) { return c.bookId === bid; });
 }
@@ -1250,6 +1349,16 @@ function applyState(d, fromCache) {
   normLinks(state);            // 兼容旧数据：把字符串 id 升级成 {id, note}
   // 兼容旧数据：v1.7.0 及以前自定义分类只存了 id，名称丢失 → 补上占位名，避免全部显示成"其他"
   state.settings.catMeta = state.settings.catMeta || {};
+  // 老数据里没有后来新增的内置分类 → 自动补上（插在"其他"前面，保持原始顺序）
+  state.settings.categories = state.settings.categories || [];
+  CAT_ORDER.forEach(function (cid) {
+    if (cid === "other") return;
+    if (state.settings.categories.indexOf(cid) >= 0) return;
+    var oi = state.settings.categories.indexOf("other");
+    if (oi < 0) state.settings.categories.push(cid);
+    else state.settings.categories.splice(oi, 0, cid);
+  });
+  if (state.settings.categories.indexOf("other") < 0) state.settings.categories.push("other");
   (state.settings.categories || []).forEach(function (cid, i) {
     if (CAT_ORDER.indexOf(cid) >= 0) return;
     if (!state.settings.catMeta[cid] || !state.settings.catMeta[cid].name) {
@@ -1258,6 +1367,12 @@ function applyState(d, fromCache) {
         color: hslColor(i),
         em: "🏷"
       };
+    }
+  });
+  // 清理书本分类清单里指向已删除分类的残留 id
+  state.projects.forEach(function (p) {
+    if (Array.isArray(p.cats)) {
+      p.cats = p.cats.filter(function (cid) { return state.settings.categories.indexOf(cid) >= 0; });
     }
   });
   if (!state.projects.length) {
@@ -1269,6 +1384,12 @@ function applyState(d, fromCache) {
   if (bar) bar.classList.toggle("hidden", !offlineMode);
   document.body.classList.toggle("is-offline", offlineMode);
   renderAll();
+  // 多本书 → 启动时先让用户选一本书（单本不打扰）
+  if (state.projects.length > 1) setTimeout(openStartPicker, 60);
+  else {
+    try { localStorage.setItem(LS_LAST_BOOK, state.projects[0].id); } catch (e) {}
+    closeStartPickerIfNeeded();
+  }
 }
 function loadState() {
   if (!Store.loadCfg()) { openSetup(); return; }
@@ -1494,6 +1615,66 @@ function askPassword(cb) {
 /* ============ 渲染 ============ */
 function renderAll() { renderHead(); renderCats(); renderView(); renderDrawer(); }
 
+/* ============ 启动选书页 ============
+ * 规则：
+ *   - 只有 1 本书 → 直接进入，不打扰
+ *   - 多本书 + 上次选过 → 先显示选书页（可点"继续上次"跳过）
+ *   - 多本书 + 从没选过 → 显示选书页
+ * 记住的选择存在 localStorage（不同设备各自独立，不进云端数据） */
+var LS_LAST_BOOK = "nn_last_book";
+
+function openStartPicker() {
+  var el = $("startPicker"); if (!el) return;
+  var lastId = "";
+  try { lastId = localStorage.getItem(LS_LAST_BOOK) || ""; } catch (e) {}
+  var lastB = null;
+  state.projects.forEach(function (p) { if (p.id === lastId) lastB = p; });
+
+  $("pkSub").textContent = lastB
+    ? "上次看的是《" + lastB.name + "》"
+    : "共 " + state.projects.length + " 本书";
+
+  $("pkList").innerHTML = state.projects.map(function (b) {
+    var n = cardsOfBook(b.id).length;
+    var isLast = b.id === lastId;
+    return '<button class="pk-item' + (isLast ? " last" : "") + '" data-pk="' + b.id + '">' +
+      '<span class="pk-em">' + (b.em || "📕") + "</span>" +
+      '<span class="pk-info"><b>' + esc(b.name) + "</b><small>" + n + " 张卡片" +
+        (isLast ? ' · <span class="pk-badge">上次</span>' : "") + "</small></span>" +
+      '<span class="pk-go">›</span></button>';
+  }).join("");
+
+  el.classList.remove("hidden");
+  document.body.classList.add("is-picking");
+
+  $("pkList").querySelectorAll("[data-pk]").forEach(function (btn) {
+    btn.addEventListener("click", function () { pickBook(btn.getAttribute("data-pk")); });
+  });
+  $("pkLast").style.display = lastB ? "" : "none";
+  $("pkLast").onclick = function () { if (lastB) pickBook(lastB.id); };
+  $("pkNew").onclick = function () {
+    var name = prompt("书名（如：白夜行）：");
+    if (!name || !name.trim()) return;
+    var ems = ["📕", "📗", "📘", "📙", "📓", "🔍", "🕵️", "🌃"];
+    var nb = { id: uid(), name: name.trim(), em: ems[state.projects.length % ems.length], created: Date.now() };
+    state.projects.push(nb);
+    try { var r = saveState(); if (r && r.then) { r.then(function () { pickBook(nb.id); }); return; } } catch (e) {}
+    pickBook(nb.id);
+  };
+}
+function pickBook(bid) {
+  curBookId = bid; curCat = "all";
+  try { localStorage.setItem(LS_LAST_BOOK, bid); } catch (e) {}
+  $("startPicker").classList.add("hidden");
+  document.body.classList.remove("is-picking");
+  renderAll();
+}
+function closeStartPickerIfNeeded() {
+  if (!$("startPicker")) return;
+  $("startPicker").classList.add("hidden");
+  document.body.classList.remove("is-picking");
+}
+
 function renderHead() {
   var b = curBook();
   $("bookTitle").textContent = b ? b.em + " " + b.name : "未选择书本";
@@ -1508,11 +1689,13 @@ function renderCats() {
   var bar = $("catBar");
   var cards = cardsOfBook(curBookId);
   var html = chipHtml("all", "全部", cards.length);
-  state.settings.categories.forEach(function (cid) {
+  var list = catsOfBook(curBookId);
+  list.forEach(function (cid) {
     var n = cards.filter(function (c) { return c.cat === cid; }).length;
     html += chipHtml(cid, catMeta(cid).name, n);
   });
-  if (curCat !== "all" && state.settings.categories.indexOf(curCat) < 0) curCat = "all";
+  // 当前筛选的分类被本书隐藏了 → 退回"全部"，避免出现"什么都没筛出来"的困惑
+  if (curCat !== "all" && list.indexOf(curCat) < 0) curCat = "all";
   bar.innerHTML = html;
 }
 function chipHtml(cid, name, n) {
@@ -1960,7 +2143,10 @@ function openEditor(card, presetLane) {
 }
 function renderEdCats() {
   var html = "";
-  state.settings.categories.forEach(function (cid) {
+  var allow = catsOfBook(curBookId);
+  // 编辑中的卡片若属于本书已隐藏的分类，仍要能显示，否则一改就丢分类
+  if (editingCard && editingCard.cat && allow.indexOf(editingCard.cat) < 0) allow = allow.concat([editingCard.cat]);
+  allow.forEach(function (cid) {
     var m = catMeta(cid);
     html += '<button class="cat-pick' + (pickedCat === cid ? " on" : "") + '" data-cc="' + cid + '"' +
       (pickedCat === cid ? ' style="background:' + m.color + '"' : "") + ">" + m.em + " " + m.name + "</button>";
@@ -2269,25 +2455,80 @@ function openMenu() {
 }
 function openCatManager() {
   var s = $("sheet");
-  var used = {};
-  cardsOfBook(curBookId).forEach(function (c) { used[c.cat] = 1; });
+  var b = curBook();
+  var bookName = b ? b.name : "本书";
+  var cards = cardsOfBook(curBookId);
+  var used = {}, cnt = {};
+  cards.forEach(function (c) { used[c.cat] = 1; cnt[c.cat] = (cnt[c.cat] || 0) + 1; });
+  ensureBookCats(b); // 首次进入这本书的分类管理时，固化成本书自己的清单
+
+  // ---------- 区块 1：本书显示哪些分类 ----------
+  var mine = state.settings.categories.map(function (cid) {
+    var m = catMeta(cid), n = cnt[cid] || 0, on = bookCatOn(cid, b);
+    return '<div class="cat-row' + (on ? "" : " off") + '">' +
+      '<button class="cat-tog' + (on ? " on" : "") + '" data-tog="' + cid + '" title="' + (on ? "在本书隐藏" : "在本书显示") + '">' + (on ? "☑" : "☐") + "</button>" +
+      '<span class="dot" style="background:' + m.color + '"></span>' +
+      '<span class="nm">' + m.em + " " + m.name + (n ? ' <span class="cnum">' + n + " 张</span>" : "") + "</span>" +
+      (CAT_ORDER.indexOf(cid) < 0 ? '<button class="rm" data-rencat="' + cid + '">改名</button>' : "") +
+      (CAT_ORDER.indexOf(cid) < 0 ? '<button class="rm" data-rmcat="' + cid + '">删除</button>' : "") +
+      "</div>";
+  }).join("");
+
+  var zeroIds = state.settings.categories.filter(function (cid) {
+    return bookCatOn(cid, b) && !cnt[cid] && cid !== "other";
+  });
+  var hiddenN = state.settings.categories.filter(function (cid) { return !bookCatOn(cid, b); }).length;
+
   s.innerHTML = '<div class="grab"></div><h3>分类管理</h3>' +
-    '<div class="pick-list">' + state.settings.categories.map(function (cid) {
-      var m = catMeta(cid);
-      var fixed = CAT_ORDER.indexOf(cid) >= 0;
-      return '<div class="pick-item"><span class="dot" style="background:' + m.color + '"></span>' +
-        '<span class="nm">' + m.em + " " + m.name + (used[cid] ? " · 有卡片" : "") + "</span>" +
-        (fixed ? "" : '<button class="rm" data-rencat="' + cid + '">改名</button><button class="rm" data-rmcat="' + cid + '">移除</button>') + "</div>";
-    }).join("") + "</div>" +
-    '<div class="f-row" style="margin-top:12px"><label>新增分类</label>' +
-    '<div style="display:flex;gap:8px"><input type="text" id="newCatName" placeholder="分类名，如：作案手法" style="flex:1">' +
-    '<button class="mini-btn primary" id="addCat" style="flex:none">添加</button></div></div>' +
+    '<div class="cm-scope">📖 正在管理《' + esc(bookName) + '》的分类显示</div>' +
+    '<div class="cm-sec"><div class="cm-h">本书显示的分类' +
+      '<span class="cm-tip">勾掉的不会出现在筛选栏和编辑器里，其他书不受影响</span></div>' +
+      '<div class="cat-rows">' + mine + "</div>" +
+      (zeroIds.length ? '<button class="btn-ghost cm-wide" id="hideZero">一键隐藏本书 ' + zeroIds.length + " 个空分类</button>" : "") +
+      (hiddenN ? '<div class="cm-tip cm-pad">本书已隐藏 ' + hiddenN + " 个分类</div>" : "") +
+    "</div>" +
+    '<div class="cm-sec"><div class="cm-h">新增分类<span class="cm-tip">默认只加到当前这本书</span></div>' +
+      '<div style="display:flex;gap:8px"><input type="text" id="newCatName" placeholder="分类名，如：作案手法" style="flex:1">' +
+      '<button class="mini-btn primary" id="addCat" style="flex:none">添加</button></div>' +
+      '<label class="cm-chk"><input type="checkbox" id="newCatAll"> 同时加到所有书</label>' +
+    "</div>" +
     '<div class="sheet-ops"><button class="btn-ghost" id="cmBack">返回</button></div>';
-  s.querySelectorAll("[data-rencat]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var cid = b.getAttribute("data-rencat");
-      var cur = catMeta(cid).name;
-      var nm = prompt("新的分类名：", cur);
+
+  // 勾选/取消勾选
+  s.querySelectorAll("[data-tog]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cid = btn.getAttribute("data-tog");
+      var bb = curBook();
+      ensureBookCats(bb);
+      var idx = bb.cats.indexOf(cid);
+      if (idx >= 0) {
+        var n = cnt[cid] || 0;
+        if (n > 0 && !confirm("《" + bb.name + "》里有 " + n + " 张卡片属于「" + catMeta(cid).name + "」。\n\n隐藏后这些卡片仍在（「全部」里能看到），只是不能再按这个分类筛选。\n\n确定隐藏吗？")) return;
+        bb.cats.splice(idx, 1);
+      } else {
+        bb.cats.push(cid);
+      }
+      saveState(); openCatManager(); renderCats(); renderView();
+    });
+  });
+  // 一键隐藏空分类
+  if ($("hideZero")) $("hideZero").addEventListener("click", function () {
+    var bb = curBook(); ensureBookCats(bb);
+    var hidden = 0;
+    var keep = state.settings.categories.slice(-1)[0]; // 保留最后一个（通常是刚新建的），避免刚建就被藏起来
+    zeroIds.forEach(function (cid) {
+      if (cid === keep) return;
+      var i = bb.cats.indexOf(cid);
+      if (i >= 0) { bb.cats.splice(i, 1); hidden++; }
+    });
+    saveState(); openCatManager(); renderCats(); renderView();
+    toast("已隐藏 " + hidden + " 个空分类");
+  });
+  // 改名
+  s.querySelectorAll("[data-rencat]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cid = btn.getAttribute("data-rencat");
+      var nm = prompt("新的分类名：", catMeta(cid).name);
       if (nm && nm.trim()) {
         state.settings.catMeta[cid] = state.settings.catMeta[cid] || {};
         state.settings.catMeta[cid].name = nm.trim();
@@ -2295,14 +2536,21 @@ function openCatManager() {
       }
     });
   });
-  s.querySelectorAll("[data-rmcat]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var cid = b.getAttribute("data-rmcat");
+  // 删除（全局）
+  s.querySelectorAll("[data-rmcat]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cid = btn.getAttribute("data-rmcat");
+      var total = state.cards.filter(function (c) { return c.cat === cid; }).length;
+      if (!confirm("删除分类「" + catMeta(cid).name + "」？\n\n所有书里共 " + total + " 张卡片会变成「其他」。")) return;
       state.settings.categories = state.settings.categories.filter(function (x) { return x !== cid; });
       if (state.settings.catMeta) delete state.settings.catMeta[cid];
-      saveState(); openCatManager(); renderCats();
+      state.projects.forEach(function (p) {
+        if (Array.isArray(p.cats)) p.cats = p.cats.filter(function (x) { return x !== cid; });
+      });
+      saveState(); openCatManager(); renderCats(); renderView(); toast("分类已删除");
     });
   });
+  // 新增
   $("addCat").addEventListener("click", function () {
     var name = $("newCatName").value.trim();
     if (!name) return;
@@ -2310,7 +2558,21 @@ function openCatManager() {
     state.settings.catMeta = state.settings.catMeta || {};
     state.settings.catMeta[key] = { name: name, color: hslColor(state.settings.categories.length), em: "🏷" };
     state.settings.categories.push(key);
-    saveState(); openCatManager(); renderCats(); toast("已添加");
+    if ($("newCatAll").checked) {
+      // 加到所有书：老书若还是"全部启用"模式则无需处理（天然可见）；显式清单模式的补进去
+      state.projects.forEach(function (p) {
+        if (Array.isArray(p.cats) && p.cats.indexOf(key) < 0) p.cats.push(key);
+      });
+    } else {
+      var cur = curBook(); ensureBookCats(cur);
+      if (cur.cats.indexOf(key) < 0) cur.cats.push(key);
+      // 其他"全部启用"的老书会天然看到它 → 显式固化它们，保持"只加到当前这本"
+      state.projects.forEach(function (p) {
+        if (p.id !== cur.id && !Array.isArray(p.cats)) p.cats = state.settings.categories.filter(function (x) { return x !== key; });
+      });
+    }
+    saveState(); openCatManager(); renderCats(); renderView();
+    toast($("newCatAll").checked ? "已添加到所有书" : "已添加到《" + (curBook() ? curBook().name : "") + "》");
   });
   $("cmBack").addEventListener("click", openMenu);
 }
@@ -2326,7 +2588,9 @@ function newBookPrompt() {
   state.projects.push({ id: uid(), name: name.trim(), em: ems[state.projects.length % ems.length], created: Date.now() });
   curBookId = state.projects[state.projects.length - 1].id;
   curCat = "all";
+  try { localStorage.setItem(LS_LAST_BOOK, curBookId); } catch (e) {}
   saveState(); renderAll();
+  closeStartPickerIfNeeded();
   toast("已创建，开始记卡片吧");
 }
 
@@ -2340,6 +2604,7 @@ function openLightbox(key) {
   ov.addEventListener("click", function () { ov.remove(); });
 }
 function addSheetX(s) {
+  document.body.classList.add("sheet-open"); // 弹层打开期间隐藏批量操作条，避免挡住弹层内容
   s.scrollTop = 0; // 每次打开弹层都回到顶部，避免沿用上一次的滚动位置
   var old = s.querySelector(".sheet-x"); if (old) old.remove();
   var oh = s.querySelector(".drag-hint"); if (oh) oh.remove();
@@ -2354,6 +2619,7 @@ function addSheetX(s) {
   s.insertBefore(b, s.firstChild);
 }
 function closeSheet() {
+  document.body.classList.remove("sheet-open");
   $("sheet").classList.add("hidden");
   $("sheetBackdrop").classList.add("hidden");
 }
@@ -2393,6 +2659,7 @@ $("bookList").addEventListener("click", function (e) {
   var item = e.target.closest("[data-b]");
   if (item) {
     curBookId = item.getAttribute("data-b"); curCat = "all";
+    try { localStorage.setItem(LS_LAST_BOOK, curBookId); } catch (e2) {}
     $("bookDrawer").classList.add("hidden");
     $("drawerBackdrop").classList.add("hidden");
     renderAll();
