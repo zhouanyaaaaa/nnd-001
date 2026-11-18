@@ -399,6 +399,22 @@
    "tags": [],
    "story": "",
    "updated": 1794107100737
+  },
+  {
+   "id": "mwln0j2zojaxy",
+   "bookId": "mvz1xs6m36d6i",
+   "created": 1794977090459,
+   "title": "契灵刷取目标",
+   "content": "术印共鸣契灵新手自选推荐\n1.优先藤原道长，月魔兔三巧韵三齐吗\n2.晴明是三星三灭鎮墓售\n3.神乐三疾风镇墓售\n4.八百三预知镇墓兽\n5.源博雅三豹眼针女\n6.源赖光三鬼神之策鎮墓兽\n契灵多用于PVE长线副本\n镇墓兽较稳定可都选它",
+   "cat": "other",
+   "images": [
+    "images/mwlmypffff4600e100000001.bin"
+   ],
+   "links": [],
+   "pinned": false,
+   "tags": [],
+   "story": "",
+   "updated": 1794977090459
   }
  ],
  "settings": {
@@ -439,6 +455,6 @@
    }
   }
  },
- "version": 72,
- "lastSaved": "2026-11-08T03:05:11.918Z"
+ "version": 73,
+ "lastSaved": "2026-11-18T04:44:50.461Z"
 }
